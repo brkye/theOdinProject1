@@ -1,2 +1,2 @@
-# theOdinProject1
+# theOdinProject Foundations Path
 HTML/CSS/JS
