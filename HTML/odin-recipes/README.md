@@ -1,1 +1,1 @@
-Hello, this is my first WEB project with using only HTML.
+Hello, this is my first WEB project using only HTML.
