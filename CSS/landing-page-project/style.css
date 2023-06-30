@@ -1,0 +1,177 @@
+body, .header, .content1, .content2, .content3, .footer, ul, .header-info, .part1, .part2, .images {
+    display: flex;
+}
+
+
+body, .header{
+    flex-direction: column;
+    size-adjust: auto;
+}
+
+body{
+    gap: 100px;
+    align-items: stretch;
+    justify-content: center;
+
+}
+
+.header{
+    border-radius: 10px;
+    background-color: #092b5b;
+    justify-content: center;
+    gap: 12px;
+    padding: 50px 100px;
+    padding-top: 0;
+    height: 300px;
+}
+
+.part1, .part2{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.part2{
+    justify-content: center;
+    gap: 100px;
+
+}
+
+.header-info{
+    flex-direction: column;
+    width: 300px;
+}
+
+.content1{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 32px;
+}
+
+.images{
+    gap: 50px;
+}
+.image-border{
+    border: 2px solid gold;
+}
+
+.content2{
+    align-self: center;
+    border: 2px solid gray ;
+    height: 100px;
+    width: 500px;
+    padding: 50px;
+    border-radius: 24px;
+    background-color: rgb(52, 2, 72);
+    justify-content: space-between;
+}
+
+
+.saying{
+
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 220px;
+
+
+}
+
+.author{
+    align-self: flex-end;
+    font-weight: bold;
+
+}
+
+.content3{
+    align-self: center;
+    height: 80px;
+    width: 1000px;
+    background-color: rgb(228, 179, 119);
+    border-radius: 12px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.footer{
+    background-color: #1F2937;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.click{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(56, 7, 134);
+}
+
+
+.placeholder{
+    width: 260px;
+    height: 200px;
+}
+
+ul{
+    justify-content: right;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    gap: 16px;
+}
+
+img{
+    border-radius: 10px;
+    object-fit: cover;
+    width: 175px;
+    height: 175px;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+p{
+    color: white;
+}
+
+h1,h2,h3{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h3{
+    font-weight: bold;
+    font-style: italic;
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #1a874b;
+}
+
+.couple{
+    width: 175px;
+    text-align: center;
+}
+.breeds, h2{
+    color: #4a740b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button{
+    border-radius: 5px;
+    background-color: rgb(74, 74, 154);
+    box-shadow: black;
+    width: fit-content;
+}
+
+
+
