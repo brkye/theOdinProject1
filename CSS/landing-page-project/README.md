@@ -10,4 +10,4 @@ with using
 
 ![](./font.png)
 
-but instead I tried to make my own website using them as template.
+but instead, I tried to make my own website using them as a template.
