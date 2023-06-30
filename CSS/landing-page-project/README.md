@@ -3,6 +3,6 @@ This is my landing page project (using only HTML and CSS) from the foundations c
 The object was to create the same website as 
 (./template.png)
 with 
-![with] (font.png)
+![with] (./font.png)
 
 but instead I tried to make my own website using them as template.
