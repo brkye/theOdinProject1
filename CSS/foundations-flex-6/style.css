@@ -29,31 +29,35 @@ input {
   margin-bottom: 16px;
 }
 
+/* SOLUTION */
 
 ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 .header, .footer{
   display: flex;
   justify-content: space-between;
   padding: 16px;
-
-
 }
+
 .footer{
   background-color: #eee;
 }
+
 a{
 text-decoration: none;
 color: default;
 }
+
 .left-links, .right-links{
   display: flex;
   gap: 10px;
 
 }
+
 body{
   display: flex;
   flex-direction: column;
