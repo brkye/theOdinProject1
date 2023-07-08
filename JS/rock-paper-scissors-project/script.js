@@ -19,4 +19,43 @@ function getComputerChoice(){
     }
     return computerChoice;
 }
-getComputerChoice();
+function playRound(playerSelection, computerSelection) {
+    playerSelection =`rOcK`
+    playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
+    console.log(playerSelection);
+    if (playerSelection == computerSelection) {
+        return (`Tie! no points will be given`);
+    }
+    let output;
+    if(playerSelection == `Rock`){
+        if (computerSelection == `Paper`) {
+            output = `You lose! `;
+        }
+        else{
+            output = `You win! `;
+        }
+    }
+    if(playerSelection == `Paper`){
+        if (computerSelection == `Scissors`) {
+            output = `You lose! `;
+        }
+        else{
+            output = `You win! `;
+        }
+    }
+    if(playerSelection == `Scissors`){
+        if (computerSelection == `Rock`) {
+            output = `You lose! ` ;
+        }
+        else{
+            output = `You win! `;
+        }
+    }
+    if (output == `You lose! `) {
+        return output + computerSelection + ` beats ` + playerSelection; 
+    }
+    else    
+        return output + playerSelection + ` beats ` + computerSelection; 
+
+}
+
