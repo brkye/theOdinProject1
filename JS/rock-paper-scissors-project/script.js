@@ -19,10 +19,8 @@ function getComputerChoice(){
     }
     return computerChoice;
 }
-function playRound(playerSelection, computerSelection) {
-    playerSelection =`rOcK`
+function playRound(playerSelection = `Rock`, computerSelection) {
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
-    console.log(playerSelection);
     if (playerSelection == computerSelection) {
         return (`Tie! no points will be given`);
     }
@@ -35,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
             output = `You win! `;
         }
     }
-    if(playerSelection == `Paper`){
+    else if(playerSelection == `Paper`){
         if (computerSelection == `Scissors`) {
             output = `You lose! `;
         }
@@ -43,14 +41,25 @@ function playRound(playerSelection, computerSelection) {
             output = `You win! `;
         }
     }
-    if(playerSelection == `Scissors`){
+    else if(playerSelection == `Scissors`){
         if (computerSelection == `Rock`) {
             output = `You lose! ` ;
         }
         else{
             output = `You win! `;
         }
+    } 
+    else {
+        playerSelection = `Rock`;
+        if (playerSelection == computerSelection) 
+            return (`Tie! no points will be given`);
+        else if (computerSelection == `Paper`) 
+            output = `You lose! `;
+        else
+            output = `You win! `;         
     }
+    
+
     if (output == `You lose! `) {
         return output + computerSelection + ` beats ` + playerSelection; 
     }
@@ -58,4 +67,21 @@ function playRound(playerSelection, computerSelection) {
         return output + playerSelection + ` beats ` + computerSelection; 
 
 }
+function game() {
+    let playerCount = 0;
+    let computerCount = 0;
+    for (let i = 0; i < playerCount != 5 && computerCount != 5 ; i++) {
+        let playerSelection = prompt (`Choose your weapon!`, `Rock-Paper-Scissors`);
+        let round = playRound(playerSelection, getComputerChoice());
+        console.log(round);
+        if (round.charAt(4) == `w`)
+            playerCount++;
+        else if(round.charAt(4) == `l`)
+            computerCount++;
+        else{}
+        console.log(`Player score = ` + playerCount);
+        console.log(`Computer score = ` + computerCount);
+    }
+}
+game();
 
