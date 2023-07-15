@@ -72,8 +72,11 @@ function game() {
     let computerCount = 0;
     for (let i = 0; i < playerCount != 5 && computerCount != 5 ; i++) {
         let playerSelection = prompt (`Choose your weapon!`, `Rock-Paper-Scissors`);
-        let round = playRound(playerSelection, getComputerChoice());
-        console.log(round);
+        let round = `nothing`;
+        if (playerSelection) {
+            round = playRound(playerSelection, getComputerChoice());
+            console.log(round);   
+        }
         if (round.charAt(4) == `w`)
             playerCount++;
         else if(round.charAt(4) == `l`)
