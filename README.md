@@ -1,2 +1,2 @@
 # theOdinProject Foundations Path
-HTML/CSS/JS
+Git/GitHub and HTML/CSS/JS skills
