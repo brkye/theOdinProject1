@@ -5,10 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>RPS</title>
 </head>
 <body>
-    getComputerChoice();
-    
+    <div class="processText">
+        <p id="winner"></p>
+        <p id="round"></p>
+        <p id="condition">First to score 5 wins the game</p>
+    </div>
+    <div class="scores">    
+        <p id="playerScore">Player = 0</p>
+        <p id="computerScore">Computer = 0</p>
+    </div>
+
+    <div class="buttons">
+        <button id="Rock">🪨</button>
+        <button id="Paper">📄</button>
+        <button id="Scissors">✂️</button>
+    </div>    
 </body>
 </html>

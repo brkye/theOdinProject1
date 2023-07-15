@@ -1,3 +1,17 @@
+let playerCount = 0;
+let computerCount = 0;
+const body = document.getElementsByTagName('body');
+const roundText =document.getElementById('round');
+const player = document.getElementById(`playerScore`);
+const computer = document.getElementById('computerScore');
+const winnerText = document.getElementById('winner');
+const condition = document.getElementById('condition');
+const buttons = document.querySelectorAll('.buttons');
+const buttonParent = document.getElementsByClassName('buttons');
+let removed;
+
+
+
 function getComputerChoice(){
     let rand = Math.floor(Math.random()*3)+1;
     let computerChoice;
@@ -61,30 +75,43 @@ function playRound(playerSelection = `Rock`, computerSelection) {
     
 
     if (output == `You lose! `) {
+        computerCount++;
         return output + computerSelection + ` beats ` + playerSelection; 
     }
     else    
+        playerCount++;
         return output + playerSelection + ` beats ` + computerSelection; 
 
 }
-function game() {
-    let playerCount = 0;
-    let computerCount = 0;
-    for (let i = 0; i < playerCount != 5 && computerCount != 5 ; i++) {
-        let playerSelection = prompt (`Choose your weapon!`, `Rock-Paper-Scissors`);
-        let round = `nothing`;
-        if (playerSelection) {
-            round = playRound(playerSelection, getComputerChoice());
-            console.log(round);   
-        }
-        if (round.charAt(4) == `w`)
-            playerCount++;
-        else if(round.charAt(4) == `l`)
-            computerCount++;
-        else{}
-        console.log(`Player score = ` + playerCount);
-        console.log(`Computer score = ` + computerCount);
-    }
-}
-game();
 
+    buttons.forEach((button) => {
+        button.addEventListener(`click`, () => {
+            if (playerCount == 5 || computerCount ==5) {
+                condition.textContent = "Game restarted. First to score 5 wins the game."
+                playerCount = 0;
+                computerCount = 0;
+                player.textContent = `Player = ` + playerCount;
+                computer.textContent = `Computer = ` + computerCount;
+                roundText.textContent = '';
+                winnerText.textContent = '';
+                return;
+
+            }
+            condition.textContent = '';
+            playerSelection = button.id;
+            round = playRound(playerSelection, getComputerChoice());
+            roundText.textContent = round;
+            player.textContent = `Player = ` + playerCount;
+            computer.textContent = `Computer = ` + computerCount;
+            if (playerCount == 5) {
+                winnerText.textContent = ' Player won! ';
+                condition.textContent = 'Press any button to restart the game.';
+                return;
+            }
+            if (computerCount == 5) {
+                winnerText.textContent = ' Computer won! ';
+                condition.textContent = 'Press any button to restart the game.';
+                return; 
+            }
+        });
+    });
