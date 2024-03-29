@@ -1,5 +1,5 @@
 # theOdinProject Foundations Path
-Git/GitHub and HTML/CSS/JS skills.
+Git/GitHub and HTML/CSS/JS skills
 
 Some websites in this repo:
  * https://brkye.github.io/theOdinProject1/HTML/odin-recipes/index.html (html)
